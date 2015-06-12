@@ -63,6 +63,6 @@ public class UniquePaths {
 
 	public static void main(String[] args) {
 	//	System.out.println(uniquePaths(100, 100));
-		System.out.println(uniquePaths_dp2(20,20));
+		System.out.println(uniquePaths_dp2(3,3));
 	}
 }
