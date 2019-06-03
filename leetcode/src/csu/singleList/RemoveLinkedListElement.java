@@ -3,10 +3,11 @@ package csu.singleList;
 import java.util.LinkedList;
 import java.util.Stack;
 
-import csu.common.Node;
+import csu.common.ListNode;
+
 
 public class RemoveLinkedListElement {
-  public Node removeElements(Node head, int val){
+  public ListNode removeElements(ListNode head, int val){
 	  Stack st = new Stack();
 	  Stack st2 = new Stack();
 	   while(head!=null){
@@ -15,12 +16,12 @@ public class RemoveLinkedListElement {
 			}
 		  head = head.next;
 		}
-	Node node  = new Node(val);
+	   ListNode node  = new ListNode(val);
 	while(!st.isEmpty()){
 		st2.push(st.pop());
 	}
 	while(!st2.isEmpty()){
-		node.next = (Node) st2.pop();
+		node.next = (ListNode) st2.pop();
 	}
 	
 	

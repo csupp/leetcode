@@ -4,14 +4,14 @@ public class checkInclusion {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-     System.out.println(checkInclusion("abc", "abedabc"));
+		System.out.println(checkInclusion("abc", "abedabc"));
 	}
 
 	public static boolean checkInclusion(String s1, String s2) {
 
 		int l1 = s1.length();
 		int l2 = s2.length();
-		int[] count = new int[128];
+		int[] count = new int[26];
 		if (l1 > l2) {
 			return false;
 		}
