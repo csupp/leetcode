@@ -2,15 +2,15 @@ package csu.common;
 
 import csu.singleList.RemoveLinkedListElement;
 
-public class Node {
+public class ListNode {
 	public int val;
-	public Node next;
+	public ListNode next;
 
-	public Node(int x) {
+	public ListNode(int x) {
 		val = x;
 	}
 
-	public static void printList(Node head) {
+	public static void printList(ListNode head) {
 		while (head != null) {
 			System.out.println(head.val + " ");
 			head = head.next;
@@ -18,12 +18,12 @@ public class Node {
 	}
 
 	public static void main(String[] args) {
-		Node n1 = new Node(1);
-		Node n2 = new Node(2);
-		Node n3 = new Node(3);
-		Node n4 = new Node(4);
-		Node n5 = new Node(5);
-		Node n6 = new Node(6);
+		ListNode n1 = new ListNode(1);
+		ListNode n2 = new ListNode(2);
+		ListNode n3 = new ListNode(3);
+		ListNode n4 = new ListNode(4);
+		ListNode n5 = new ListNode(5);
+		ListNode n6 = new ListNode(6);
 		n1.next = n2;
 		n2.next = n3;
 		n3.next = n4;
