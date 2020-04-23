@@ -9,10 +9,10 @@ public class FindKthLargest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] nums = { 3, 2, 3, 1, 2, 4, 5, 5, 6, 8, 8, 3, 9, 0, 6, 7 };
+		int[] nums = {1,2,3,4,5,6,7,8,9,10};
 		int k = 6;
 		// System.out.println(findKthLargest(nums, k));
-		System.out.println(findKthLargest_quickSort(nums, 0, nums.length - 1, k));
+		System.out.println(findKthLargest_quickSort(nums, 0, nums.length - 1, 5));
 	}
 
 	/**
@@ -37,17 +37,17 @@ public class FindKthLargest {
 	 * @return
 	 */
 	public static int findKthLargest_quickSort(int[] nums, int low, int high, int k) {
-		if (low < high) {
+		while (low < high) {
 			int index = getIndex(nums, low, high, k);
 			if (index == nums.length - k) {
 				System.out.println(Arrays.toString(nums));
 				return nums[index];
 			} else if (index < nums.length - k) {
-			
-				findKthLargest_quickSort(nums, index + 1, high, k);
+			  low=index+1;
+				 
 
 			} else {
-				findKthLargest_quickSort(nums, low, index - 1, k);
+				high=index-1;
 			}
 		}
 		
@@ -65,9 +65,10 @@ public class FindKthLargest {
 				i++;
 			}
 			nums[j] = nums[i];
-			nums[i] = temp;
+			
 
 		}
+		nums[i] = temp;
 		return i;
 	}
 }

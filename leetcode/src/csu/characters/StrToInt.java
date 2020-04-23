@@ -1,5 +1,7 @@
 package csu.characters;
 
+import java.util.Arrays;
+
 public class StrToInt {
 
 	public static void main(String[] args) {
@@ -7,6 +9,9 @@ public class StrToInt {
 		System.out.println(StrToInt("123456"));
 		System.out.println(StrToInt("+23456"));
 		System.out.println(StrToInt("-23456"));
+		String [] strs= {"abcdefs","abdss","ab"};
+		Arrays.sort(strs);
+		System.out.println(Arrays.toString(strs));
 
 	}
 

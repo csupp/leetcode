@@ -28,4 +28,20 @@ public class ReverseSentence {
 
 	}
 
+	public static String reverseSentence(String str) {
+		if (str.trim().length() == 0) {
+			return str;
+		}
+		String[] temp = str.split(" ");
+		String res = "";
+		for (int i = temp.length - 1; i >= 0; i--) {
+			res += temp[i];
+			if (i != 0) {
+				res += " ";
+			}
+		}
+		return res;
+
+	}
+
 }
