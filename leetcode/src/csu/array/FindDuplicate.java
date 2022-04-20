@@ -1,5 +1,7 @@
 package csu.array;
 
+import java.util.HashMap;
+
 /**
  * Leecode 287 寻找重复数
  * 
@@ -20,6 +22,22 @@ public class FindDuplicate {
 		// TODO Auto-generated method stub
 		int nums[] = { 1, 3, 4, 2, 2 };
 		System.out.println(findDuplicate(nums));
+		System.out.println(findDuplicate2(nums));
+	}
+
+	public static int findDuplicate2(int[] nums){
+		HashMap<Integer,Integer> map = new HashMap<>();
+		for(int a: nums){
+			if(map.containsKey(a)){
+				map.put(a,map.get(a)+1);
+				return a;
+			}else{
+				map.put(a,1);
+			}
+		}
+
+		return -1;
+
 	}
 
 	public static int findDuplicate(int[] nums) {

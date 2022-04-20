@@ -7,11 +7,11 @@ public class firstUniqChar {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(firstUniqChar("leettl"));
-		System.out.println(firstUniqChar("leettlo"));
-		System.out.println(firstUniqChar(""));
-		System.out.println(firstUniqChar2("leettl"));
-		System.out.println(firstUniqChar2("leettlo"));
+//		System.out.println(firstUniqChar("leettl"));
+//		System.out.println(firstUniqChar("leettlo"));
+//		System.out.println(firstUniqChar(""));
+//		System.out.println(firstUniqChar2("leettl"));
+		System.out.println(firstUniqChar2("leeottl"));
 		System.out.println(firstUniqChar2(""));
 	}
 

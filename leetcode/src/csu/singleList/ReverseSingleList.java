@@ -18,7 +18,20 @@ public class ReverseSingleList {
 		n4.next = n5;
 		n5.next = n6;
 
-		System.out.println(reverseList(n1));
+		ListNode n =n1;
+		while(n!=null){
+			System.out.print(n.val+">");
+			n= n.next;
+		}
+
+		System.out.println("");
+
+       ListNode r = reverseSingleList(n1);
+       while(r!=null){
+			System.out.print(r.val+">");
+			r= r.next;
+		}
+
 
 	}
 
@@ -52,6 +65,23 @@ public class ReverseSingleList {
 		head.next.next = head;
 		head.next = null;
 		return head;
+	}
+
+	public static ListNode reverseSingleList(ListNode head){
+		if(head==null || head.next==null){
+			return head;
+		}
+		ListNode pre = null;
+		ListNode temp= null;
+		while(head!=null){
+			temp=head;
+			head = head.next;
+			temp.next=pre;
+			pre=temp;
+
+		}
+
+		return pre;
 	}
 
 }

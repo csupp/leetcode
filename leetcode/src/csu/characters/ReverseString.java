@@ -40,25 +40,6 @@ public class ReverseString {
 
 	}
 
-	/**
-	 * 
-	 */
-	public static String reverseStr(String str) {
-		if (str.length() < 2) {
-			return str;
-		}
-		char[] chs = str.toCharArray();
-		int i = 0;
-		int j = chs.length - i - 1;
-		while (i < j) {
-			char temp = chs[i];
-			chs[i] = chs[j];
-			chs[j] = temp;
-			i++;
-			j--;
-		}
-		return new String(chs);
-	}
 
 	/**
 	 * Use StringBuffer to reverse string
