@@ -21,8 +21,8 @@ public class FindDuplicate {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int nums[] = { 1, 3, 4, 2, 2 };
-		System.out.println(findDuplicate(nums));
-		System.out.println(findDuplicate2(nums));
+	//	System.out.println(findDuplicate(nums));
+		System.out.println(findDuplicat2(nums));
 	}
 
 	public static int findDuplicate2(int[] nums){
@@ -38,6 +38,18 @@ public class FindDuplicate {
 
 		return -1;
 
+	}
+
+	public static int findDuplicat2(int [] nums){
+		HashMap<Integer,Integer> map = new HashMap<>();
+		for(int a: nums){
+			if(map.containsKey(a)){
+				return a;
+			}else{
+				map.put(a,1);
+			}
+		}
+		return -1;
 	}
 
 	public static int findDuplicate(int[] nums) {

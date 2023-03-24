@@ -57,6 +57,23 @@ public class ReverseSingleList {
 		return pre;
 	}
 
+	public static ListNode revList(ListNode head){
+		if(head == null || head.next == null){
+			return head;
+		}
+		ListNode pre = null;
+		ListNode temp = null;
+		while(head!=null){
+			temp = head;
+			head= head.next;
+			temp.next=pre;
+			pre=temp;
+		}
+		return pre;
+	}
+
+
+
 	public static ListNode reverseList1(ListNode head) {
 		if (head == null || head.next == null) {
 			return head;
